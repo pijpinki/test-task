@@ -1,0 +1,16 @@
+define({
+  "name": "Test task",
+  "version": "0.1.0",
+  "description": "Test task api docs",
+  "title": "Pavel awesome",
+  "url": "http://localhost:8199/docs",
+  "sampleUrl": false,
+  "defaultVersion": "0.0.0",
+  "apidoc": "0.3.0",
+  "generator": {
+    "name": "apidoc",
+    "time": "2019-08-21T09:56:00.073Z",
+    "url": "http://apidocjs.com",
+    "version": "0.17.7"
+  }
+});

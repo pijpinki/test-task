@@ -1,0 +1,482 @@
+[
+  {
+    "type": "POST",
+    "url": "/books",
+    "title": "",
+    "name": "AddBooks",
+    "group": "Books",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "title",
+            "description": "<ul> <li>book title max 64 chars</li> </ul>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "description",
+            "description": "<ul> <li>book description</li> </ul>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "image",
+            "description": "<ul> <li>book image url</li> </ul>"
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "author_id",
+            "description": "<ul> <li>book author id</li> </ul>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "boolean",
+            "optional": false,
+            "field": "success",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "object",
+            "optional": false,
+            "field": "book",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "number",
+            "optional": false,
+            "field": "book.id",
+            "description": "<ul> <li>Book id</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "number",
+            "optional": false,
+            "field": "book.author_id",
+            "description": "<ul> <li>Book author id</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "book.author",
+            "description": "<ul> <li>Book author</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "book.title",
+            "description": "<ul> <li>Book title</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "book.description",
+            "description": "<ul> <li>Book description</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "book.image",
+            "description": "<ul> <li>Book image</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "book.date",
+            "description": "<ul> <li>Book date</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "book.created",
+            "description": "<ul> <li>Book created date</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "book.updated",
+            "description": "<ul> <li>Book updated date</li> </ul>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "handlers/books/BooksAdd.js",
+    "groupTitle": "",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "type": "object",
+            "optional": false,
+            "field": "error",
+            "description": ""
+          },
+          {
+            "group": "Error 4xx",
+            "type": "string",
+            "optional": false,
+            "field": "error.message",
+            "description": "<ul> <li>error message</li> </ul>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "PUT",
+    "url": "/books",
+    "title": "",
+    "name": "EditBook",
+    "group": "Books",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "id",
+            "description": "<ul> <li>book id</li> </ul>"
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": true,
+            "field": "author_id",
+            "description": "<ul> <li>author id</li> </ul>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": true,
+            "field": "title",
+            "description": "<ul> <li>book title</li> </ul>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": true,
+            "field": "description",
+            "description": "<ul> <li>book description</li> </ul>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": true,
+            "field": "image",
+            "description": "<ul> <li>book image</li> </ul>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "boolean",
+            "optional": false,
+            "field": "success",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "object",
+            "optional": false,
+            "field": "book",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "number",
+            "optional": false,
+            "field": "book.id",
+            "description": "<ul> <li>Book id</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "number",
+            "optional": false,
+            "field": "book.author_id",
+            "description": "<ul> <li>Book author id</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "book.author",
+            "description": "<ul> <li>Book author</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "book.title",
+            "description": "<ul> <li>Book title</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "book.description",
+            "description": "<ul> <li>Book description</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "book.image",
+            "description": "<ul> <li>Book image</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "book.date",
+            "description": "<ul> <li>Book date</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "book.created",
+            "description": "<ul> <li>Book created date</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "book.updated",
+            "description": "<ul> <li>Book updated date</li> </ul>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "handlers/books/BooksEdit.js",
+    "groupTitle": "",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "type": "object",
+            "optional": false,
+            "field": "error",
+            "description": ""
+          },
+          {
+            "group": "Error 4xx",
+            "type": "string",
+            "optional": false,
+            "field": "error.message",
+            "description": "<ul> <li>error message</li> </ul>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "GET",
+    "url": "/books",
+    "title": "",
+    "name": "List",
+    "group": "Books",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": true,
+            "field": "offset",
+            "defaultValue": "0",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": true,
+            "field": "limit",
+            "defaultValue": "100",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "object",
+            "optional": true,
+            "field": "sort",
+            "defaultValue": "{}",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "object",
+            "optional": true,
+            "field": "filter",
+            "defaultValue": "{}",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "number",
+            "optional": false,
+            "field": "offset",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "number",
+            "optional": false,
+            "field": "limit",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "object",
+            "optional": false,
+            "field": "sort",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "object",
+            "optional": false,
+            "field": "filter",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "object[]",
+            "optional": false,
+            "field": "books",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "number",
+            "optional": false,
+            "field": "books.id",
+            "description": "<ul> <li>Book id</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "number",
+            "optional": false,
+            "field": "books.author_id",
+            "description": "<ul> <li>Book author id</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "books.author",
+            "description": "<ul> <li>Book author</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "books.title",
+            "description": "<ul> <li>Book title</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "books.description",
+            "description": "<ul> <li>Book description</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "books.image",
+            "description": "<ul> <li>Book image</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "books.date",
+            "description": "<ul> <li>Book date</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "books.created",
+            "description": "<ul> <li>Book created date</li> </ul>"
+          },
+          {
+            "group": "Success 200",
+            "type": "string",
+            "optional": false,
+            "field": "books.updated",
+            "description": "<ul> <li>Book updated date</li> </ul>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "params",
+        "content": "{\n    filter: {id: 1},\n    sort: {id: 'DESC'},\n}",
+        "type": "json"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "handlers/books/BooksList.js",
+    "groupTitle": "",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "type": "object",
+            "optional": false,
+            "field": "error",
+            "description": ""
+          },
+          {
+            "group": "Error 4xx",
+            "type": "string",
+            "optional": false,
+            "field": "error.message",
+            "description": "<ul> <li>error message</li> </ul>"
+          }
+        ]
+      }
+    }
+  }
+]
